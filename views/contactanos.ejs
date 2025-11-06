@@ -1,0 +1,31 @@
+<%- include('templates/header') %>
+
+<main class="d-flex justify-content-center align-items-center min-vh-100" style="background-color: #f8f9fa;">
+  <div class="card shadow p-4" 
+       style="max-width: 420px; width: 100%; border: none; border-radius: 18px; background-color: #ffffff;">
+    <h3 class="text-center mb-4 fw-semibold">Formulario de contacto</h3>
+    
+    <form action="/contactanos" method="POST">
+      <div class="mb-3">
+        <label for="nombre" class="form-label fw-medium">Nombre</label>
+        <input type="text" class="form-control rounded-3" id="nombre" name="nombre" placeholder="Tu nombre" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="email" class="form-label fw-medium">Correo electrónico</label>
+        <input type="email" class="form-control rounded-3" id="email" name="email" placeholder="ejemplo@correo.com" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="mensaje" class="form-label fw-medium">Mensaje</label>
+        <textarea class="form-control rounded-3" id="mensaje" name="mensaje" rows="3" placeholder="Escribe tu mensaje..." required></textarea>
+      </div>
+
+      <div class="d-grid">
+        <button type="submit" class="btn btn-dark rounded-3 py-2">Enviar</button>
+      </div>
+    </form>
+  </div>
+</main>
+
+<%- include('templates/footer') %>
